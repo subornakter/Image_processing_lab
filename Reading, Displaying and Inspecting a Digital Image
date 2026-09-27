@@ -1,0 +1,34 @@
+import cv2
+import matplotlib.pyplot as plt
+
+# Read grayscale image
+gray = cv2.imread("images/grayscale.jpg", cv2.IMREAD_GRAYSCALE)
+
+print("Grayscale Image")
+print("Width:", gray.shape[1])
+print("Height:", gray.shape[0])
+print("Channels: 1")
+print("Data type:", gray.dtype)
+
+plt.imshow(gray, cmap="gray")
+plt.title("Grayscale Image")
+plt.axis("off")
+plt.show()
+
+
+# Read color image
+color = cv2.imread("images/color.jpg")
+
+print("\nColor Image")
+print("Width:", color.shape[1])
+print("Height:", color.shape[0])
+print("Channels:", color.shape[2])
+print("Data type:", color.dtype)
+
+# Convert BGR to RGB for displaying
+color_rgb = cv2.cvtColor(color, cv2.COLOR_BGR2RGB)
+
+plt.imshow(color_rgb)
+plt.title("Color Image")
+plt.axis("off")
+plt.show()
