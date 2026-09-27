@@ -1,0 +1,36 @@
+import cv2
+import matplotlib.pyplot as plt
+
+images = {
+    "X-Ray": "images/xray.jpg",
+    "Satellite": "images/satellite.jpg",
+    "Microscopy": "images/microscopy.jpg",
+    "Ultrasound": "images/ultrasound.jpg",
+    "Infrared": "images/infrared.jpg"
+}
+
+applications = {
+    "X-Ray": "Used for detecting bone fractures and internal abnormalities.",
+    "Satellite": "Used for weather monitoring, mapping, and land observation.",
+    "Microscopy": "Used for studying cells, tissues, and microorganisms.",
+    "Ultrasound": "Used for medical imaging such as observing organs and pregnancy.",
+    "Infrared": "Used for thermal imaging, night vision, and heat detection."
+}
+
+for modality, path in images.items():
+
+    image = cv2.imread(path)
+
+    if image is None:
+        print(modality, "image not found.")
+        continue
+
+    image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+    plt.figure(figsize=(6, 5))
+    plt.imshow(image_rgb)
+    plt.title(modality)
+    plt.axis("off")
+    plt.show()
+
+    print(modality + ": " + applications[modality])
