@@ -41,4 +41,5 @@ Take a single clean image and generate 20 noisy copies of it by adding random Ga
 ## Set and Logical Operations on Binary Images
 Create two binary images of the same size, each containing a simple shape (e.g., a white circle and a white square that partially overlap). Write a program to compute and display the AND, OR, NOT, and XOR of the two images, and describe what each result represents in terms of the two original shapes.
 
-Basic Geometric Transformations Write a program that applies the following transformations to an input image, one at a time: (a) translation by a given number of pixels in the x and y directions, (b) rotation by a given angle in degrees around the image center, and (c) scaling by a given factor. Display the original image alongside each transformed version, and note any empty (black) regions that appear as a result of the transformation.
+## Basic Geometric Transformations 
+Write a program that applies the following transformations to an input image, one at a time: (a) translation by a given number of pixels in the x and y directions, (b) rotation by a given angle in degrees around the image center, and (c) scaling by a given factor. Display the original image alongside each transformed version, and note any empty (black) regions that appear as a result of the transformation.
